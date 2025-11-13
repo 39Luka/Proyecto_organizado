@@ -1,4 +1,5 @@
-// src/components/Header.jsx
+import Nav from "./Nav.jsx"
+
 function Header() {
   return (
     <header className="w-full bg-gray-800 text-white py-4 shadow-md">

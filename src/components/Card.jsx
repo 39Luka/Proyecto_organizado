@@ -1,4 +1,4 @@
-function Interpretes(props) {
+function Card(props) {
     const { foto, nombre, esNota10 } = props;
     return (
         <article
@@ -37,4 +37,4 @@ function Interpretes(props) {
     );
 }
 
-export default Interpretes;
+export default Card;
