@@ -1,4 +1,11 @@
+import Seccion from "../components/Seccion";
+
 function Admin() {
-  return <div>Página de admin</div>;
+  return (
+  <Seccion titulo="Administración">
+
+    
+  </Seccion>
+  )
 }
 export default Admin;

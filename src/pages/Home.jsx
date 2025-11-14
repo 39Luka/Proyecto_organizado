@@ -1,4 +1,10 @@
+import Seccion from "../components/Seccion";
+
 function Home() {
-  return <div>Página de home</div>;
+  return (
+    <Seccion titulo="Bienvenido a la página principal">
+     
+    </Seccion>
+  )
 }
 export default Home;

@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import Peliculas from './pages/Peliculas.jsx';
 import Admin from './pages/Admin.jsx';
+import Seccion from "./components/Seccion.jsx";
 
 function App() {
   return (
@@ -17,7 +18,11 @@ function App() {
           <Route path="peliculas" element={<Peliculas />} />
           <Route path="interpretes" element={<Interpretes />} />
           <Route path="admin" element={<Admin />} />
+
+
+          <Route path="*" element={<Seccion titulo="Página no encontrada"/>} />
         </Route>
+
       </Routes>    
     </>
   )

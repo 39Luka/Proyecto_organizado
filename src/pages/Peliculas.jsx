@@ -1,4 +1,25 @@
+import Card from "../components/Card";
+import Seccion from "../components/Seccion";
+import peliculas from "../data/peliculas";
+
 function Peliculas() {
-  return <div>Página de películas</div>;
+ return (
+  <Seccion titulo="Películas Destacadas" subtitulo="Listado de películas:">
+
+       {peliculas.map((pelicula, index) => ( 
+
+            <Card
+                key={index}
+                nombre={pelicula.nombre}
+                foto={pelicula.cartelera}
+                rutaBase="/peliculas"
+                >
+                {pelicula.resumen}
+            </Card>
+            ))
+       }
+
+  </Seccion >
+ );
 }
 export default Peliculas;
