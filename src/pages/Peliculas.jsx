@@ -12,7 +12,6 @@ function Peliculas() {
                 key={index}
                 nombre={pelicula.nombre}
                 foto={pelicula.cartelera}
-                rutaBase="/peliculas"
                 >
                 {pelicula.resumen}
             </Card>

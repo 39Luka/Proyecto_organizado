@@ -6,6 +6,7 @@ import Home from './pages/Home.jsx';
 import Peliculas from './pages/Peliculas.jsx';
 import Admin from './pages/Admin.jsx';
 import Seccion from "./components/Seccion.jsx";
+import DetalleInterprete from "./pages/DetalleInterprete.jsx";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           <Route path="interpretes" element={<Interpretes />} />
           <Route path="admin" element={<Admin />} />
 
-
+          <Route path="interpretes/:id" element={<DetalleInterprete />} />
+          
           <Route path="*" element={<Seccion titulo="Página no encontrada"/>} />
         </Route>
 
