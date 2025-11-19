@@ -30,7 +30,7 @@ function Nav() {
       {isOpen && (
         <ul
           id="menu-movil"
-          className="fixed top-20 left-0 w-full bg-(--color-secondary) z-50 flex flex-col gap-4 p-6 md:hidden"
+          className="fixed top-20 left-0 w-full bg-(--color-secondary) z-50 flex flex-col gap-4 p-6 md:hidden" //Md hidden hace que en la medianas o grandes se oculte (solo móvil)
           role="menu"
         >
           {links.map((link) => (
@@ -48,8 +48,9 @@ function Nav() {
         </ul>
       )}
 
-      {/* Menú horizontal para escritorio */}
+      {/* Menú horizontal para escritorio, hidden hace que se oculte y el md flex es cuando sea mediano o grande entonces se muestre (escritorio) */}
       <ul className="hidden md:flex gap-4" role="menubar">
+      
         {links.map((link) => (
           <li key={link.to} role="none">
             <NavLink
