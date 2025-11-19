@@ -11,11 +11,10 @@ function DetalleInterprete() {
 
     return (
         <>
-
             <section className="max-w-5xl mx-auto mt-8 p-4">
                 <nav className="w-full flex justify-end mt-4">
                     <Link to="/interpretes">
-                        <button className="px-4 py-2 bg-[var(--color-primary)] text-white font-bold rounded hover:bg-[var(--color-secondary)] hover:text-[var(--color-primary)] transition">
+                        <button className="px-4 py-2 bg-(--color-primary) text-white font-bold rounded hover:bg-(--color-secondary) hover:text-(--color-primary) transition">
                             Volver
                         </button>
                     </Link>
@@ -28,7 +27,7 @@ function DetalleInterprete() {
                         className="w-full md:w-64 rounded-lg object-cover"
                     />
                     <figcaption className="flex-1">
-                        <h2 className="heading-base heading-h3 text-[var(--color-primary)] mb-4">
+                        <h2 className="heading-base heading-h3 text-(--color-primary) mb-4">
                             {interprete.nombre}
                         </h2>
                         <p className="text-base-style text-medium">{interprete.biografia}</p>
