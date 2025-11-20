@@ -12,7 +12,10 @@ import DetallePelicula from "./pages/DetallePelicula.jsx";
 function App() {
   return (
     <>
-    <Header />
+
+      <Header />
+
+      {/* Enrutamiento */}
       <Routes>
         <Route path="/" element={<MainContent />}>
           <Route index element={<Home />} />    
@@ -21,17 +24,16 @@ function App() {
           <Route path="interpretes" element={<Interpretes />} />
           <Route path="admin" element={<Admin />} />
 
-          <Route path="interpretes/:id" element={<DetalleInterprete />} />
+          {/* A los interpretes se les debe pasar su pelicula y su index en esa pelicula */}
+          <Route path="interpretes/:peliculaId/:actorId" element={<DetalleInterprete />} />
+          {/* A las peliculas se les pasa su id que viene del array */}
           <Route path="peliculas/:id" element={<DetallePelicula />} />
-
-
 
           <Route path="*" element={<Seccion titulo="Página no encontrada"/>} />
         </Route>
-
       </Routes>    
     </>
-  )
+  );
 }
 
-export default App
+export default App;
