@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import peliculas from "../data/peliculas";
 import Card from "../components/Card";
 import Seccion from "../components/Seccion";
@@ -6,6 +6,8 @@ import Seccion from "../components/Seccion";
 function DetallePelicula() {
     const { id } = useParams();
     const pelicula = peliculas.find(p => p.id === Number(id));
+    const navigate = useNavigate(); // <-- Hook para navegación
+
 
     if (!pelicula) {
         return <h2 className="heading-h2">Película no encontrada</h2>;
@@ -17,14 +19,12 @@ function DetallePelicula() {
 
                 {/* Navegación */}
                 <nav className="w-full flex justify-end mt-4">
-                    <Link to="/peliculas">
-                        <button
-                            style={{ backgroundColor: "var(--color-primary)", color: "white" }}
-                            className="px-4 py-2 font-bold rounded hover:opacity-80 transition"
-                        >
-                            Volver
-                        </button>
-                    </Link>
+                    <button
+                        className="px-4 py-2 bg-(--color-primary) text-white font-bold rounded hover:bg-(--color-secondary) hover:text-(--color-primary) transition"
+                        onClick={() => navigate(-1)}
+                    >
+                        Volver
+                    </button>
                 </nav>
 
                 {/* Título principal */}
