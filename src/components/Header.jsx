@@ -2,10 +2,12 @@ import Nav from "./Nav.jsx";
 
 function Header() {
   return (
+    <>
+    {/* Encabezado principal de la aplicación */}
     <header
       className="w-full bg-(--color-secondary) text-white py-4 shadow-md"
-      role="banner"
     >
+      {/* Contenedor del título y la navegación */}
       <div
         className="container mx-auto flex justify-between items-center px-4"
         role="presentation" // contenedor de estilo sin contenido propio importante
@@ -16,6 +18,7 @@ function Header() {
         <Nav />
       </div>
     </header>
+    </>
   );
 }
 

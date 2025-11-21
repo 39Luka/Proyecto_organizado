@@ -26,10 +26,12 @@ function DetallePelicula() {
                     </button>
                 </nav>
 
+                {/* Nombre de la película */}
                 <header>
                     <h1 className="heading-h1 heading-base">{pelicula.nombre}</h1>
                 </header>
 
+                {/* Cartelera de la película */}
                 <figure className="max-w-xs w-full mx-auto my-4">
                     <img
                         src={pelicula.cartelera}
@@ -37,6 +39,8 @@ function DetallePelicula() {
                         className="w-full h-auto block rounded-lg shadow-md"
                     />
                 </figure>
+
+                {/* Información de la película */}
 
                 <section aria-labelledby="info-pelicula" className="mb-6 space-y-2">
                     <h2 id="info-pelicula" className="heading-h2 heading-base">Información</h2>
@@ -59,7 +63,7 @@ function DetallePelicula() {
                                 <Card
                                     nombre={actor.nombre}
                                     foto={actor.imagen}
-                                    esNota10={actor.nota === 10}
+                                    esNota10={Number(pelicula.nota) === 10} // seguro que es número
                                 >
                                     {actor.biografia}
                                 </Card>

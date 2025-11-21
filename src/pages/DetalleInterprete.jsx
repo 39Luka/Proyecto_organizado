@@ -15,6 +15,7 @@ function DetalleInterprete() {
 
     return (
         <section className="max-w-5xl mx-auto mt-8 p-4">
+            {/* Botón de volver */}
             <nav className="w-full flex justify-end mt-4">
                 <button 
                     className="px-4 py-2 bg-(--color-primary) text-white font-bold rounded hover:bg-(--color-secondary) hover:text-(--color-primary) transition" 
@@ -24,6 +25,7 @@ function DetalleInterprete() {
                 </button>
             </nav>
 
+            {/* Detalle del intérprete */}
             <figure className="flex flex-col md:flex-row gap-6 items-start">
                 <img
                     src={interprete.imagen}

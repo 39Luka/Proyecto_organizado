@@ -12,7 +12,6 @@
 /* ===== Headings ===== */
 .heading-base{
   font-weight: var(--heading-weight-base);
-
 }
 .heading-h1 {
   font-size: var(--heading-h1-size);
