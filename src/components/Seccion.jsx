@@ -16,7 +16,6 @@ function Seccion({ children, titulo, subtitulo }) {
       {subtitulo && (<p className="text-base-style text-large pt-4">{subtitulo}</p>
       )}
     
-
       <div role="Grid" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 w-full mt-8">
       {children}
       </div>

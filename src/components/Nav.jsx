@@ -38,8 +38,7 @@ function Nav() {
               <NavLink
                 to={link.to}
                 className="block px-3 py-2 rounded-md text-medium text-bold text-(--color-primary) hover:bg-(--color-primary) hover:text-(--color-write)"
-                onClick={() => setIsOpen(false)}
-                role="menuitem"
+                onClick={() => setIsOpen(false)} //Cierra el menú al hacer clic en un enlace
               >
                 {link.label}
               </NavLink>
@@ -50,9 +49,8 @@ function Nav() {
 
       {/* Menú horizontal para escritorio, hidden hace que se oculte y el md flex es cuando sea mediano o grande entonces se muestre (escritorio) */}
       <ul className="hidden md:flex gap-4" role="menubar">
-      
         {links.map((link) => (
-          <li key={link.to} role="none">
+          <li key={link.to}>
             <NavLink
               to={link.to}
               className="px-3 py-2 rounded-md text-medium text-bold text-(--color-primary) hover:bg-(--color-primary) hover:text-(--color-write)"
